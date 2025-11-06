@@ -33,7 +33,7 @@
                         <li class="nav-item">
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <a class="nav-link" href="#" onclick="this.closest('form').submit()">
+                                <a class="nav-link"  onclick="this.closest('form').submit()">
                                     Logout
                                 </a>
                             </form>
