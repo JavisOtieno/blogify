@@ -20,4 +20,17 @@
 
             <hr>
             <p class="small text-muted mb-0">Created: {{ $post->created_at->toDayDateTimeString() }}</p>
-            <p class="small text-muted">Updated: {{
+            <p class="small text-muted">Updated: {{ $post->updated_at->toDayDateTimeString() }}</p>
+        </div>
+        <div class="card-footer">
+            <a href="{{ route('admin.posts.edit', $post) }}" class="btn btn-primary">Edit</a>
+
+            <form action="{{ route('admin.posts.destroy', $post) }}" method="POST" style="display:inline">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger" onclick="return confirm('Delete this post?')">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+@endsection
