@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        {{-- <a @class(['nav-link', 'active' => request()->routeIs('home')]) href="{{ url('/') }}"> --}}
+                        <a @class(['nav-link', 'active' => request()->routeIs('home')]) href="{{ url('/') }}">
                             Home
                         </a>
                     </li>
@@ -40,12 +40,12 @@
                         </li>
                     @else
                         <li class="nav-item">
-                            {{-- <a class="nav-link" href="{{ route('login') }}"> --}}
+                            <a class="nav-link" href="{{ route('login') }}">
                                 Login
                             </a>
                         </li>
                         <li class="nav-item">
-                            {{-- <a class="nav-link" href="{{ route('register') }}"> --}}
+                            <a class="nav-link" href="{{ route('register') }}">
                                 Register
                             </a>
                         </li>
