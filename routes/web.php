@@ -12,4 +12,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('posts', PostController::class);
     Route::post('posts/import', [PostController::class, 'import'])->name('posts.import');
 });
+Route::get('/', function () {
+    return view('home');
+})->name('home');
+Route::resource('posts', PostController::class)->only(['index','show']);
 
