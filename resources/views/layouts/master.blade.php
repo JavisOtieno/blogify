@@ -31,11 +31,11 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     @auth
                         <li class="nav-item">
-                            <form action="{{ route('logout') }}" method="post">
+                            <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <a class="nav-link"  onclick="this.closest('form').submit()">
+                                <button type="submit" class="nav-link btn btn-link" style="cursor: pointer; text-decoration: none;">
                                     Logout
-                                </a>
+                                </button>
                             </form>
                         </li>
                     @else
